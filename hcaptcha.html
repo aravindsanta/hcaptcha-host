@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hCaptcha</title>
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+</head>
+<body>
+<form>
+    <div class="h-captcha" data-sitekey="1c44ea3e-3b2e-4a2c-9fb8-34fa0a8c5288" data-callback="captchaCallback"></div>
+</form>
+<script>
+    function captchaCallback(token) {
+      window.parent.postMessage(token, "*");
+    }
+</script>
+</body>
+</html>
